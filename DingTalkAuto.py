@@ -21,7 +21,7 @@ def send_Auto_In_QQ(message = '39'): # 自动发送QQ消息
     while True:
         if pyautogui.locateOnScreen('pic\\SendKey.png') != None:
             send_key = pyautogui.locateOnScreen('pic\\SendKey.png')
-            pyautogui.moveTo(send, duration=0.5)
+            pyautogui.moveTo(send_key, duration=0.5)
             pyautogui.moveRel(-50, -50)
             pyautogui.click()
             pyautogui.typewrite(message, interval=0.25)
