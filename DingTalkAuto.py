@@ -65,7 +65,10 @@ def main():
                 if get_second(finishTime[i]) < get_second(now_time()) < get_second(startTime[i+1]):
                     diff_time = get_second(startTime[i+1]) - get_second(now_time())
                     print('已下课!',diff_time,'S后上课')
-                    time.sleep(diff_time-30)
+                    if diff_time > 30:
+                        time.sleep(diff_time-30)
+                    else:
+                        time.sleep(diff_time)
                     break
             for i in range(len(startTime)):
                 if get_second(startTime[i]) < get_second(now_time()) < get_second(finishTime[i]):
