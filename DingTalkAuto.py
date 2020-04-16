@@ -43,7 +43,7 @@ def now_time():  # 获取系统时间，返回列表
     return time
 
 def get_second(x):
-    return x['hour'] * 3600 + x['minute']*60 +x['second']
+    return int(x['hour'] * 3600 + x['minute']*60 +x['second'])
 
 def main():
     startTime = StrT0List('8:29 9:19 10:09 10:59 14:29 15:20')
@@ -65,7 +65,10 @@ def main():
                 if get_second(finishTime[i]) < get_second(now_time()) < get_second(startTime[i+1]):
                     diff_time = get_second(startTime[i+1]) - get_second(now_time())
                     print('已下课!',diff_time,'S后上课')
-                    time.sleep(diff_time-30)
+                    if diff_time > 30:
+                        time.sleep(diff_time-30)
+                    else:
+                        time.sleep(diff_time - 30)
                     break
             for i in range(len(startTime)):
                 if get_second(startTime[i]) < get_second(now_time()) < get_second(finishTime[i]):
