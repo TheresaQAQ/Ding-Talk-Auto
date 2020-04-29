@@ -59,9 +59,6 @@ def now_time():  # 获取系统时间，返回列表
     time['hour'] = int(datetime.now().strftime('%H'))
     time['minute'] = int(datetime.now().strftime('%M'))
     time['second'] = int(datetime.now().strftime('%S'))
-    finishTime = StrT0List('9:10 10:00 10:50 11:40 15:10 16:00')
-    os.popen('C:\\Program Files (x86)\\DingDing\\DingtalkLauncher.exe')  # 打开钉钉
-    print('打开钉钉主程序......')
     return time
 
 def get_second(x):
