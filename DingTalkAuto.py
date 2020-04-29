@@ -125,13 +125,13 @@ def main():
                         print('已下课!',diff_time,'S后上课')
                         if diff_time >= 600:
                             time.sleep(diff_time - 600)
-                            Sign_in_QQ() # 个人需要，不需要请删除
+                            #Sign_in_QQ() # 个人需要，不需要请删除
                             time.sleep(600)
                         elif 30 < diff_time < 600:
-                            Sign_in_QQ() # 个人需要，不需要请删除
+                            #Sign_in_QQ() # 个人需要，不需要请删除
                             time.sleep(diff_time-30)
                         else:
-                            Sign_in_QQ() # 个人需要，不需要请删除
+                            #Sign_in_QQ() # 个人需要，不需要请删除
                             time.sleep(diff_time)
                         break
 
@@ -150,17 +150,17 @@ def main():
                     #距离上课还有十分钟以上
                     if diff_time >= 600:
                         time.sleep(diff_time - 600)
-                        Sign_in_QQ() # 个人需要，不需要请删除
+                        #Sign_in_QQ() # 个人需要，不需要请删除
                         time.sleep(600)
 
                     #距离上课还有30秒以上但不足十分钟
                     elif 30 < diff_time < 600:
-                        Sign_in_QQ() # 个人需要，不需要请删除
+                        #Sign_in_QQ() # 个人需要，不需要请删除
                         time.sleep(diff_time - 30)
 
                     #距离上课不足30秒
                     else:
-                        Sign_in_QQ() # 个人需要，不需要请删除
+                        #Sign_in_QQ() # 个人需要，不需要请删除
                         time.sleep(diff_time)
                 if get_second(now_time()) > get_second(finishTime[-1]):
                     print('今天没课了，你看尼玛呢') # 嘤嘤嘤
