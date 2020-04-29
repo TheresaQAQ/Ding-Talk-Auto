@@ -18,7 +18,7 @@
 
 CMD命令 **pip install pyautogui**
 
-![1588185085372](C:\Users\ZQJ\AppData\Roaming\Typora\typora-user-images\1588185085372.png)
+![1588185085372](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588165257392.png)
 
 ### 填写配置文件
 
