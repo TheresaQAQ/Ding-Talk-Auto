@@ -40,22 +40,32 @@ def Sign_in_QQ(message = '39'):
             send_Auto_In_QQ(message=message)
             break
         else:
+            pyautogui.moveTo(pyautogui.locateOnScreen('pic\\live2.png'), duration=0.5)
+            pyautogui.click()
             pyautogui.moveTo(1676, 1059, duration=0.5)
             pyautogui.click()
 
 def live():
-    pyautogui.moveTo(pyautogui.locateOnScreen('pic\\live.png'), duration=0.5)
-    pyautogui.click()
+    if pyautogui.locateOnScreen('pic\\live2.png') != None:
+        pyautogui.moveTo(pyautogui.locateOnScreen('pic\\live2.png'), duration=0.5)
+        pyautogui.click()
+    else:
+        pyautogui.moveTo(pyautogui.locateOnScreen('pic\\live.png'), duration=0.5)
+        pyautogui.moveRel(200,100)
+        pyautogui.click()
 
 def now_time():  # 获取系统时间，返回列表
     time = {}
     time['hour'] = int(datetime.now().strftime('%H'))
     time['minute'] = int(datetime.now().strftime('%M'))
     time['second'] = int(datetime.now().strftime('%S'))
+    finishTime = StrT0List('9:10 10:00 10:50 11:40 15:10 16:00')
+    os.popen('C:\\Program Files (x86)\\DingDing\\DingtalkLauncher.exe')  # 打开钉钉
+    print('打开钉钉主程序......')
     return time
 
 def get_second(x):
-    return x['hour'] * 3600 + x['minute']*60 +x['second']
+    return int(x['hour'] * 3600 + x['minute']*60 +x['second'])
 
 
 def main():
@@ -63,16 +73,17 @@ def main():
     finishTime = StrT0List('9:10 10:00 10:50 11:40 15:10 16:00')
     os.popen('C:\\Program Files (x86)\\DingDing\\DingtalkLauncher.exe')  # 打开钉钉
     print('打开钉钉主程序......')
+    time.sleep(3)
     while True:
-        while True:
-            if pyautogui.locateOnScreen('pic\\DingTalkGroupStatus2.png') != None:
-                break
-            else:
-                pyautogui.moveTo(pyautogui.locateOnScreen('pic\\DingTalkGroupStatus1.png'),duration=0.5)
-                pyautogui.click()
-                pyautogui.moveRel(100,100)
+        if pyautogui.locateOnScreen('pic\\DingTalkGroupStatus2.png') != None:
+            break
+        else:
+            pyautogui.moveTo(pyautogui.locateOnScreen('pic\\DingTalkGroupStatus1.png'), duration=0.5)
+            pyautogui.click()
+            pyautogui.moveRel(100, 100)
+    while True:
         try:
-            if pyautogui.locateOnScreen('pic\\live.png') != None:
+            if pyautogui.locateOnScreen('pic\\live.png') or pyautogui.locateOnScreen('pic\\WatchLive.png') or pyautogui.locateOnScreen('pic\\live2.png')  != None:
                 print('正在直播...')
                 if pyautogui.locateOnScreen('pic\\WatchLive.png') != None:
                     print('已进入直播间...')
@@ -83,7 +94,7 @@ def main():
             else:
                 for i in range(len(startTime) - 1):
                     if get_second(finishTime[i]) < get_second(now_time()) < get_second(startTime[i+1]):
-                        diff_time = get_second(startTime[i + 1]) - get_second(now_time())
+                        diff_time = int(get_second(startTime[i + 1]) - get_second(now_time()))
                         print('已下课!',diff_time,'S后上课')
                         if diff_time >= 600:
                             time.sleep(diff_time - 600)
@@ -101,13 +112,18 @@ def main():
                         print('上课时间未直播...')
                         time.sleep(10)
                         break
-                if get_second(startTime[i]) > get_second(now_time()):
-                    diff_time = get_second(startTime[i + 1]) - get_second(now_time())
+                if get_second(startTime[0]) > get_second(now_time()):
+                    diff_time = get_second(startTime[0]) - get_second(now_time())
                     print('已下课!', diff_time, 'S后上课')
-                    Sign_in_QQ()
-                    if diff_time > 30:
+                    if diff_time >= 600:
+                        time.sleep(diff_time - 600)
+                        Sign_in_QQ()
+                        time.sleep(600)
+                    elif 30 < diff_time < 600:
+                        Sign_in_QQ()
                         time.sleep(diff_time - 30)
                     else:
+                        Sign_in_QQ()
                         time.sleep(diff_time)
                 if get_second(now_time()) > get_second(finishTime[-1]):
                     print('今天没课了，你看尼玛呢')
