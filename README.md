@@ -38,7 +38,7 @@ CMD命令 **pip install pyautogui**
 
 ![Image text](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588184506761.png)
 
-**注意：**去掉  **‘ ’**，把  **\ ** 改成  **双反斜杠**
+**注意:** 去掉 **‘’**，把  **单反斜杠** 改成  **双反斜杠**
 
 #### 钉钉群头像路径
 
@@ -60,12 +60,12 @@ CMD命令 **pip install pyautogui**
 
 把图片路径填进去，记得后缀名 
 
-**注意：**把  **\ ** 改成  **双反斜杠**
+**注意:** 把  **单反斜杠** 改成  **双反斜杠**
 
 ![Image text](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588184143381.png)
 
 ## 特别说明
 
-源代码里的**Sign_in_QQ**和**send_Auto_In_QQ()**是用来自动在QQ群签到的，不需要请删除
+源代码里的**Sign_in_QQ** 和 **send_Auto_In_QQ()** 是用来自动在QQ群签到的，不需要请删除
 
 默认情况下已经把它注释了
