@@ -18,7 +18,7 @@
 
 CMD命令 **pip install pyautogui**
 
-![1588185085372](C:\Users\ZQJ\AppData\Roaming\Typora\typora-user-images\1588185085372.png)
+![Image text](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588185085372.png)
 
 ### 填写配置文件
 
@@ -26,19 +26,19 @@ CMD命令 **pip install pyautogui**
 
 24小时制，用空格分开
 
-![1588184969233](C:\Users\ZQJ\AppData\Roaming\Typora\typora-user-images\1588184969233.png)
+![Image text](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588184969233.png)
 
 #### 钉钉安卓路径
 
 右键桌面快捷方式，打开**属性**，复制红框
 
-![1588184430290](C:\Users\ZQJ\AppData\Roaming\Typora\typora-user-images\1588184430290.png)
+![Image text](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588184430290.png)
 
 稍加修改后填进去
 
-![1588184506761](C:\Users\ZQJ\AppData\Roaming\Typora\typora-user-images\1588184506761.png)
+![Image text](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588184506761.png)
 
-**注意：**去掉  **‘ ’**，把  **\ ** 改成  **双反斜杠**
+**注意:** 去掉 **‘’**，把  **单反斜杠** 改成  **双反斜杠**
 
 #### 钉钉群头像路径
 
@@ -46,26 +46,26 @@ CMD命令 **pip install pyautogui**
 
 先看两张图
 
-![1588165524658](C:\Users\ZQJ\AppData\Roaming\Typora\typora-user-images\1588165524658.png)
+![Image text](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588165524658.png)
 
-![1588165556638](C:\Users\ZQJ\AppData\Roaming\Typora\typora-user-images\1588165556638.png)
+![Image text](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588165556638.png)
 
 不难看出进入钉钉群和离开钉钉群的**背景色不一样**
 
 为了判断是否进入群，所以需要这两种情况的截图
 
-![1588184222044](C:\Users\ZQJ\AppData\Roaming\Typora\typora-user-images\1588184222044.png)
+![Image text](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588184222044.png)
 
 ##### 填写路径
 
 把图片路径填进去，记得后缀名 
 
-**注意：**把  **\ ** 改成  **双反斜杠**
+**注意:** 把  **单反斜杠** 改成  **双反斜杠**
 
-![1588184143381](C:\Users\ZQJ\AppData\Roaming\Typora\typora-user-images\1588184143381.png)
+![Image text](https://github.com/TheresaQAQ/PictureWarehouse/blob/master/DingTalkAuto/1588184143381.png)
 
 ## 特别说明
 
-源代码里的**Sign_in_QQ**和**send_Auto_In_QQ()**是用来自动在QQ群签到的，不需要请删除
+源代码里的**Sign_in_QQ** 和 **send_Auto_In_QQ()** 是用来自动在QQ群签到的，不需要请删除
 
 默认情况下已经把它注释了
