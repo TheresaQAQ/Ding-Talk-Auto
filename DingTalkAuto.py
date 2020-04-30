@@ -107,7 +107,7 @@ def main():
                 print('正在直播...')
 
                 #如果已经进入直播间
-                if pyautogui.locateOnScreen('pic\\WatchLive.png') != None:
+                if pyautogui.locateOnScreen('pic\\LiveWindows.png') != None:
                     print('已进入直播间...')
                     time.sleep(15)
 
